@@ -33,9 +33,9 @@ app.use('/posts/store',validationMiddleWare)
 
 //express session
 const expressSession = require('express-session');
-const sessionSecret = require('./Keys/sessionSecret');
+// const sessionSecret = require('./Keys/sessionSecret');
 app.use(expressSession({
-    secret: sessionSecret
+    secret: "funny cat"
 }))
 
 //if log in, do not show show nav links

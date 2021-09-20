@@ -1,0 +1,48 @@
+<!-- {! and enter to get basic html} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- header -->
+<%- include('layouts/header'); -%>
+
+    <body>
+
+        <div id="container">
+
+            <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');">
+                <!-- navigation -->
+                <%- include('layouts/navbar'); -%>
+            </div>
+
+            <div class="form">
+                <fieldset>
+                    <legend>Login</legend>
+                    <form action="/users/login" method="POST">
+                        <p>username:</p>
+                        <input type="text" name="username" />
+
+                        <p>password:</p>
+                        <input type="password" name="password" />
+                        <br>
+                        <button type="submit">Login</button>
+                    </form>
+
+                </fieldset>
+
+
+            </div>
+            <!-- footer -->
+            <%- include('layouts/footer'); -%>
+
+        </div>
+
+
+
+
+        </div>
+        <!-- script -->
+        <%- include('layouts/script'); -%>
+    </body>
+
+</html>

@@ -1,0 +1,109 @@
+<!-- {! and enter to get basic html} -->
+<!-- header -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('layouts/header'); -%>
+
+    <body>
+
+        <div id="container">
+
+            <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');">
+                <!-- navigation -->
+                <%- include('layouts/navbar'); -%>
+                    <h1 class="bannerText">I have no special talents. I am only PASSIONATELY CURIOUS.</h1>
+                    <p class="author"><i>Albert Einstain</i></p>
+            </div>
+
+
+            <!-- search button -->
+            <!-- <form class="search">
+                <input 
+                action='/posts/search'
+                method='POST'
+                type="search" 
+                placeholder="Enter keyword" 
+                name="search" />
+
+                <button type="submit">Submit</button>
+            </form> -->
+
+            <!-- articles -->
+            <div class="text">
+                <p>
+                    Are you curious to learn business and technology?
+                </p>
+                <p>Hi, my name is Jerry and I majored in business in my uni year, focusing on Finance. Having worked
+                    2 years
+                    in strategic consulting, then I moved on
+                    to one of the fortune 500 companies to learn the commercial side of things. While in the
+                    business world,
+                    for my curiosity in technology,
+                    I self-taught my self web development technology. I did not plan out the self-taught journey as
+                    such but
+                    due to Covid19, I
+                    have to postpone my plan of further studies in computer science. So I started self-learning
+                    while
+                    WFH...After about 1 year, I have the modules that
+                    are offered by most bootcamps, while refering to their course contents.
+                </p>
+
+                <p>Why curiosity as the centre piece of this blog? During my journey of learning business and tech,
+                    I
+                    released
+                    curiosity is a form of super energy that lies dormant within you and me. With this realization,
+                    I was
+                    able harness this untapped
+                    energy to accelerate my learning. In this blog, I will share with you all about this, while
+                    specifically
+                    focusing on business and technology because
+                    both has become increasingly connected nowadays.
+                </p>
+
+                <h2>
+                    What curiosity is not?
+                </h2>
+                <ol>
+                    <li>Curiosity is not about absorbing large amount of information. In this era, we are actually
+                        inundated
+                        with so much information to the
+                        point of information fatigue. Our brain is to create ideas, not to memorize information.
+                    </li>
+                </ol>
+
+               
+
+                <div class="blogposts">
+
+                    <!-- pass database data into the html -->
+                    <% for(var i=0; i<blogposts.length; i++) { %>
+                        <a href="/post/<%= blogposts[i]._id %>">
+                            <h2 class="title">
+                                <%= blogposts[i].title %>
+                            </h2>
+
+                            <h3 class="body">
+                                <%- blogposts[i].body.split('</p>')[0] + '...'+ '</p>' %>
+                            </h3>
+                        </a>
+                        <p class="postedBy">Posted by Jerry
+                            on <%= blogposts[i].datePosted.toDateString() %>
+                        </p>
+                        <% } %>
+
+                </div>
+
+            </div>
+
+            <!-- footer -->
+            <%- include('layouts/footer'); -%>
+
+
+        </div>
+        <%- include('layouts/script'); -%>
+
+    </body>
+
+</html>

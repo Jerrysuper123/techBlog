@@ -20,7 +20,7 @@ app.listen(port, ()=>{
 //connect to mongod db 
 const mongoose = require('mongoose');
 // const BlogPost = require('./models/BlogPost');
-const mongodbAPI = require('./Keys/mongodbAPI')
+// const mongodbAPI = require('./Keys/mongodbAPI')
 mongoose.connect('mongodb+srv://jerryChen:Je-112233@cluster0.wdmoq.mongodb.net/my_database', {useNewUrlParser: true})
 
 //static file does not show up, you have to use public to make it work

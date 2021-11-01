@@ -1,58 +1,59 @@
+<div class="menu" onclick="OpenPopUp()">
+    <div class="menuIcon">
+        <div class="menubar"></div>
+        <div class="menubar"></div>
+        <div class="menubar"></div>
 
-
-    <div class="menu" onclick="OpenPopUp()">
-        <div class="menuIcon">
-            <div class="menubar"></div>
-            <div class="menubar"></div>
-            <div class="menubar"></div>
-
-        </div>
-        <p class="menuText">MENU</p>
     </div>
+    <p class="menuText">MENU</p>
+</div>
 
-    <div id="popUp">
-        <div class="navMobile">
+<div id="popUp">
+    <div class="navMobile">
 
-            <p class="closeNavMobile" onclick="hidePopUp()">x</p>
-            <a href="/">Home</a>
+        <p class="closeNavMobile" onclick="hidePopUp()">x</p>
+        <a href="/">Home</a>
 
-            <% if(loggedIn) { %>
+        <% if(loggedIn) { %>
             <a href="/postNewBlog">Post new blog</a>
             <% } %>
-            
-            <% if(!loggedIn) { %>
-            <!-- <a href="/Signup">Sign up</a> -->
-            <a href="/Login">Log In</a>
-            <% } %>
-            <a href="/logout">Log out</a>
-        </div>
+
+                <% if(!loggedIn) { %>
+                    <!-- <a href="/Signup">Sign up</a> -->
+                    <a href="/Login">Sign In</a>
+                    <% } %>
+                        <a href="/logout">Sign out</a>
     </div>
+</div>
 
-    <nav>
-        <div class="topnav">
+<nav class="nav">
+    <div class="topnav">
+        <div class="icon">
+            <img width="60px" height="60px"
+                src="https://cdn-icons.flaticon.com/png/512/534/premium/534621.png?token=exp=1635732746~hmac=7b4dd438a6b7b2ac14191f73b644e56c">
 
-            <a href="/">Home</a>
+        </div>
 
-            <% if(loggedIn) { %>
+        <a href="/">Home</a>
+
+        <% if(loggedIn) { %>
             <a href="/postNewBlog">Post new blog</a>
             <% } %>
-            
-            <% if(!loggedIn) { %>
-            <!-- <a href="/Signup">Sign up</a> -->
-            <a href="/Login">Log In</a>
-            <% } %>
-            <a href="/logout">Log out</a>
-        </div>
 
-    </nav>
-
-    
-    <div class="socialMedia">
-        <a href="https://www.linkedin.com/in/jerryqchen/?originalSubdomain=sg"
-         target="_blank"    
-        >
-            <img src="/images/linkedin.png" width="30px">
-        </a>
-        
-        <!-- <img src="images/facebook.png" width="30px"> -->
+                <% if(!loggedIn) { %>
+                    <!-- <a href="/Signup">Sign up</a> -->
+                    <a href="/Login">Sign In</a>
+                    <% } %>
+                        <a href="/logout">Sign out</a>
     </div>
+
+</nav>
+
+
+<div class="socialMedia">
+    <a href="https://www.linkedin.com/in/jerryqchen/?originalSubdomain=sg" target="_blank">
+        <img src="/images/linkedin.png" width="30px">
+    </a>
+
+    <!-- <img src="images/facebook.png" width="30px"> -->
+</div>

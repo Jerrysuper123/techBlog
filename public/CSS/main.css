@@ -1,10 +1,9 @@
 /* import an font style */
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
@@ -25,12 +24,37 @@ body {
 .banner {
   /* background-image:url("images/FrontBanner.jpeg");  */
   /* background-repeat: no-repeat; */
-  background-size: cover;
+  background-color: turquoise;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.bannerText {
+  margin-top: 30vh;
+  padding: 0;
+  margin-bottom: -20px;
+}
+
+.name {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.name:hover {
+  transform: scale(1.1);
+}
+
+.nameTag {
+  font-size: 27px;
+  font-family: "Julius Sans One", sans-serif;
+  background: linear-gradient(to left, #40bbfe, #e40246);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-style: italic;
 }
 
 .nav {
@@ -103,6 +127,7 @@ blockquote {
   flex-direction: column;
   align-items: center;
   text-align: justify;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .form {
@@ -118,26 +143,16 @@ li {
 }
 
 .socialMedia {
-  background-color: rgb(255, 255, 255);
-  padding: 10px 0px 10px 0;
-  z-index: 100;
   position: fixed;
-  top: 300px;
-  left: 5px;
-  box-shadow: 0.5px 0.5px #888888;
-  animation: move 2s infinite alternate;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  right: 10px;
 }
 
 @keyframes move {
   from {
-    top: 300px;
+    top: 450px;
   }
   to {
-    top: 330px;
+    top: 460px;
   }
 }
 
@@ -228,21 +243,58 @@ legend {
 }
 
 .blogposts {
-  border-top: 1px solid grey;
+  /* border-top: 1px solid grey; */
   text-align: center;
+  font-family: inherit;
   /* border: 1px solid grey; */
+  /* background: rgb(244, 255, 239); */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blogposts:hover {
+  transform: scale(1.05);
+}
+
+.blogposts a {
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.title {
+  color: rgb(254, 254, 254);
+  padding: 10px;
+}
+
+.titleBanner {
+  width: 100%;
+  background: turquoise;
+}
+
+.body {
+  font-weight: lighter;
+  padding: 10px;
 }
 
 .blogpost {
   text-align: justify;
+  font-family: "Roboto", sans-serif;
 }
 
 .postedBy {
   color: rgb(33, 16, 41);
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   border-bottom: 1px solid rgb(223, 223, 223);
   /* width: 40%; */
   font-style: italic;
+  /* background: rgb(211, 211, 211); */
+  background: linear-gradient(to left, #40bbfe, #e40246);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.text {
+  width: 400px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -256,11 +308,13 @@ legend {
 }
 
 #copy {
-  background-color: rgb(167, 167, 167);
+  background-color: rgb(1, 94, 152);
   /* z-index: 170; */
   width: 100%;
   height: 100%;
-  color: white;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 700px) {

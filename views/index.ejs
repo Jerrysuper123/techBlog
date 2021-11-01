@@ -10,11 +10,18 @@
 
         <div id="container">
 
-            <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');">
+            <div class="banner">
                 <!-- navigation -->
                 <%- include('layouts/navbar'); -%>
-                    <h1 class="bannerText">I have no special talents. I am only PASSIONATELY CURIOUS.</h1>
-                    <p class="author"><i>Albert Einstain</i></p>
+                    <div class="bannerText">
+                        <h2 class="name">Jerry Chen</h2>
+                        <div class="nameTagmov">
+                            <h3 class="nameTag">Coding and entreneurship</h3>
+                        </div>
+
+
+                    </div>
+
             </div>
 
 
@@ -32,9 +39,9 @@
 
             <!-- articles -->
             <div class="text">
-                <p>
-                    Are you curious to learn business and technology?
-                </p>
+                <h3>
+                    Are you still curious?
+                </h3>
                 <p>Hi, my name is Jerry and I majored in business in my uni year, focusing on Finance. Having worked
                     2 years
                     in strategic consulting, then I moved on
@@ -62,30 +69,21 @@
                     both has become increasingly connected nowadays.
                 </p>
 
-                <h2>
-                    What curiosity is not?
-                </h2>
-                <ol>
-                    <li>Curiosity is not about absorbing large amount of information. In this era, we are actually
-                        inundated
-                        with so much information to the
-                        point of information fatigue. Our brain is to create ideas, not to memorize information.
-                    </li>
-                </ol>
-
-
-
                 <div class="blogposts">
 
                     <!-- pass database data into the html -->
                     <% for(var i=0; i<blogposts.length; i++) { %>
                         <a href="/post/<%= blogposts[i]._id %>">
-                            <h2 class="title">
-                                <%= blogposts[i].title %>
-                            </h2>
+                            <div class="titleBanner">
+                                <h2 class="title">
+                                    <%= blogposts[i].title %>
+                                </h2>
+
+                            </div>
+
 
                             <h3 class="body">
-                                <%- blogposts[i].body.split('</p>')[0] + '...'+ '</p>' %>
+                                <%- blogposts[i].body.split('</p>')[0] + '..'+ '</p>' %>
                             </h3>
                         </a>
                         <p class="postedBy">Posted by Jerry

@@ -1,5 +1,6 @@
 /* import an font style */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -12,17 +13,10 @@ body {
 
 #container {
   margin: 0px 10px 0px 10px;
-  background-color: #e6e6e6;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: rgb(230, 230, 230);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   z-index: 0;
   height: 100%;
   /* border-radius: 0 0 50% 50%; */
@@ -34,16 +28,9 @@ body {
   background-color: turquoise;
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bannerText {
@@ -59,14 +46,12 @@ body {
 }
 
 .name:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nameTag {
   font-size: 27px;
   font-family: "Julius Sans One", sans-serif;
-  background: -webkit-gradient(linear, right top, left top, from(#40bbfe), to(#e40246));
   background: linear-gradient(to left, #40bbfe, #e40246);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -83,16 +68,10 @@ body {
   /* border-bottom-style: solid; */
   background: white;
   /* width: 100%; */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100vw;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .icon {
@@ -115,18 +94,17 @@ body {
 }
 
 .topnav a:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#40bbfe), to(#e40246));
   background: linear-gradient(to left, #40bbfe, #e40246);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* .topnav a:active {
   background-color: rgb(122, 253, 214);
   color: rgb(255, 132, 132);
 } */
+
 h1 {
   color: white;
   padding-top: 70px;
@@ -135,7 +113,7 @@ h1 {
 }
 
 blockquote {
-  color: #030303;
+  color: rgb(3, 3, 3);
   opacity: 0.2;
 }
 
@@ -143,22 +121,14 @@ blockquote {
   line-height: 2em;
   width: 70%;
   height: 100%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 40px;
   margin-top: -20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   text-align: justify;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .blogpost {
@@ -166,7 +136,7 @@ blockquote {
 }
 
 .form {
-  background-color: #dcf5ff;
+  background-color: rgb(220, 245, 255);
   padding: 40px;
   /* border-radius: 12px; */
   width: 400px;
@@ -180,15 +150,6 @@ li {
 .socialMedia {
   position: fixed;
   right: 10px;
-}
-
-@-webkit-keyframes move {
-  from {
-    top: 450px;
-  }
-  to {
-    top: 460px;
-  }
 }
 
 @keyframes move {
@@ -205,12 +166,10 @@ li {
   right: 20px;
   top: 20px;
 }
-
 fieldset {
   border: 1px solid #d3d3d3;
   border-radius: 10px;
 }
-
 legend {
   background-color: #cccccc;
   border-radius: 12px;
@@ -232,34 +191,20 @@ legend {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 5px;
   left: 10px;
 }
 
 .navMobile {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   opacity: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: left;
   height: 300px;
   width: 300px;
@@ -269,7 +214,6 @@ legend {
   font-size: 20px;
   margin-top: 20px;
 }
-
 #popUp {
   display: none;
 }
@@ -283,15 +227,9 @@ legend {
   border-radius: 30px;
   text-align: center;
   padding: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .closeNavMobile:hover {
@@ -316,13 +254,11 @@ legend {
   /* border: 1px solid grey; */
   /* background: rgb(244, 255, 239); */
   border-radius: 20px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .blogposts:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .blogposts a {
@@ -331,7 +267,7 @@ legend {
 }
 
 .title {
-  color: #fefefe;
+  color: rgb(254, 254, 254);
   padding: 10px;
 }
 
@@ -351,13 +287,12 @@ legend {
 }
 
 .postedBy {
-  color: #211029;
+  color: rgb(33, 16, 41);
   margin-bottom: 40px;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid rgb(223, 223, 223);
   /* width: 40%; */
   font-style: italic;
   /* background: rgb(211, 211, 211); */
-  background: -webkit-gradient(linear, right top, left top, from(#40bbfe), to(#e40246));
   background: linear-gradient(to left, #40bbfe, #e40246);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -371,27 +306,24 @@ legend {
   .bannerText {
     font-size: 40px;
   }
+
   nav {
     display: none;
   }
+
   .text {
     width: 80%;
   }
 }
 
 footer {
-  background-color: #015e98;
+  background-color: rgb(1, 94, 152);
   /* z-index: 170; */
   width: 100%;
   height: 100%;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  color: rgb(255, 255, 255);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /* flex-direction: column;
   margin: -10px; */
   margin: -10px;
@@ -400,8 +332,8 @@ footer {
 .blogTitle {
   margin-top: 100px;
 }
-
 /* must define background-size cover in the outer div of the image */
+
 .wave {
   aspect-ratio: 1500/500;
   width: 100%;
@@ -415,4 +347,3 @@ footer {
     display: none;
   }
 }
-/*# sourceMappingURL=main.css.map */

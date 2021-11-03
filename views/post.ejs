@@ -9,43 +9,43 @@
 
         <div id="container">
 
+            <!-- 
+                <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');"> -->
 
-                <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');">
-            
-                <!-- navigation -->
-                <%- include('layouts/navbar'); -%>
-            </div>
+            <!-- navigation -->
+            <%- include('layouts/navbar'); -%>
+        </div>
 
-            <!-- articles -->
-            <div class="text">
-                <hr style="border-top: 1px solid gray; z-index: 200;">
+        <!-- articles -->
+        <div class="text">
+            <!-- <hr style="border-top: 1px solid gray; z-index: 200;"> -->
 
-                <div class="blogpost">
+            <div class="blogpost">
 
-                    <!-- pass database data into the html -->
+                <!-- pass database data into the html -->
 
-                    <a>
-                        <h2 class="title">
-                            <%= blogpost.title %>
-                        </h2>
+                <a>
+                    <h2 class="blogTitle">
+                        <%= blogpost.title %>
+                    </h2>
 
-                        <h3 class="body">
-                            <%- blogpost.body %>
-                        </h3>
-                    </a>
-                    <p class="postedBy">Posted by Jerry Chen on <%= blogpost.datePosted.toDateString() %>
-                    </p>
-
-                </div>
+                    <h3 class="body">
+                        <%- blogpost.body %>
+                    </h3>
+                </a>
+                <p class="postedBy">Posted by Jerry Chen on <%= blogpost.datePosted.toDateString() %>
+                </p>
 
             </div>
-
-            <!-- footer -->
-            <%- include('layouts/footer'); -%>
-
 
         </div>
-        <%- include('layouts/script'); -%>
+
+        <!-- footer -->
+        <%- include('layouts/footer'); -%>
+
+
+            </div>
+            <%- include('layouts/script'); -%>
 
     </body>
 

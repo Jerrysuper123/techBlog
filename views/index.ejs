@@ -70,10 +70,11 @@
                     both has become increasingly connected nowadays.
                 </p>
 
-                <div class="blogposts">
 
-                    <!-- pass database data into the html -->
-                    <% for(var i=0; i<blogposts.length; i++) { %>
+
+                <!-- pass database data into the html -->
+                <% for(var i=0; i<blogposts.length; i++) { %>
+                    <div class="blogposts">
                         <a href="/post/<%= blogposts[i]._id %>">
                             <div class="titleBanner">
                                 <h2 class="cardTitle">
@@ -83,16 +84,17 @@
                             </div>
 
 
-                            <h3 class="blogBody">
+                            <div class="blogBody">
                                 <%- blogposts[i].body.split('</p>')[0] + '..'+ '</p>' %>
-                            </h3>
+                            </div>
                         </a>
                         <p class="postedBy">Posted by Jerry
                             on <%= blogposts[i].datePosted.toDateString() %>
                         </p>
-                        <% } %>
+                    </div>
+                    <% } %>
 
-                </div>
+
 
             </div>
 

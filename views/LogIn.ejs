@@ -8,24 +8,22 @@
 
     <body>
 
-        <div id="container">
+        <div id="containerLogin">
 
-            <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');">
+            <div class="banner bannerHeightLogin">
                 <!-- navigation -->
                 <%- include('layouts/navbar'); -%>
-            </div>
 
-            <div class="form">
+            </div>
+            <div class="loginForm">
+                <p class="blogBody whiteText">This sign in page is primarily for the author of this blog.</p>
                 <fieldset>
                     <legend>Login</legend>
                     <form action="/users/login" method="POST">
-                        <p>username:</p>
-                        <input type="text" name="username" />
-
-                        <p>password:</p>
-                        <input type="password" name="password" />
+                        <input type="text" name="username" placeholder="username" />
+                        <input type="password" name="password" placeholder="password" />
                         <br>
-                        <button type="submit">Login</button>
+                        <button class="loginButton" type="submit">Sign In</button>
                     </form>
 
                 </fieldset>

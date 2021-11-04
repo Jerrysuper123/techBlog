@@ -10,18 +10,14 @@
 
         <div id="container">
 
-
-
-
-
             <div class="banner">
                 <!-- navigation -->
                 <%- include('layouts/navbar'); -%>
                     <div class="bannerText">
-                        <h2 class="name">Jerry Chen</h2>
-                        <div class="nameTagmov">
-                            <h3 class="nameTag">Coding and entreneurship</h3>
-                        </div>
+                        <h2 class="authorName">Jerry Chen</h2>
+                        <!-- <div class="nameTagmov"> -->
+                        <h3 class="authorSlogan">Coding and entreneurship</h3>
+                        <!-- </div> -->
 
 
                     </div>
@@ -43,7 +39,7 @@
 
             <!-- articles -->
 
-            <div class="text">
+            <div class="pageContent">
                 <h3>
                     Are you still curious?
                 </h3>
@@ -80,14 +76,14 @@
                     <% for(var i=0; i<blogposts.length; i++) { %>
                         <a href="/post/<%= blogposts[i]._id %>">
                             <div class="titleBanner">
-                                <h2 class="title">
+                                <h2 class="cardTitle">
                                     <%= blogposts[i].title %>
                                 </h2>
 
                             </div>
 
 
-                            <h3 class="body">
+                            <h3 class="blogBody">
                                 <%- blogposts[i].body.split('</p>')[0] + '..'+ '</p>' %>
                             </h3>
                         </a>

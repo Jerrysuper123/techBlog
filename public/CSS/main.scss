@@ -1,349 +1,42 @@
 /* import an font style */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
+$primaryBlogText: "Roboto", sans-serif;
+$secondaryText: "Julius Sans One", sans-serif;
+$curvyText: "Dancing Script", cursive;
+$boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+@mixin columnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.icon {
-  margin-top: 10px;
+@import "./navBar";
+@import "./banner";
+@import "./form";
+@import "./mobileNavBar";
+@import "./footer";
+@import "./pageContent";
+@import "./blog";
+
+body {
+  margin: 0;
+  font-family: $primaryBlogText;
+  text-align: center;
 }
 
 #container {
   margin: 0px 10px 0px 10px;
-  background-color: rgb(230, 230, 230);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: rgb(9, 9, 9);
+  @include columnCenter();
   z-index: 0;
   height: 100%;
   /* border-radius: 0 0 50% 50%; */
 }
 
-.banner {
-  /* background-image:url("images/FrontBanner.jpeg");  */
-  /* background-repeat: no-repeat; */
-  background-color: turquoise;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.bannerText {
-  margin-top: 30vh;
-  padding: 0;
-  margin-bottom: -20px;
-}
-
-.name {
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
-  font-size: 100px;
-}
-
-.name:hover {
-  transform: scale(1.1);
-}
-
-.nameTag {
-  font-size: 27px;
-  font-family: "Julius Sans One", sans-serif;
-  background: linear-gradient(to left, #40bbfe, #e40246);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  font-style: italic;
-}
-
-.nav {
-  position: fixed;
-}
-
-.topnav {
-  /* border-bottom-width: 0.03px; */
-  /* border-bottom-color: white; */
-  /* border-bottom-style: solid; */
-  background: white;
-  /* width: 100%; */
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.icon {
-  margin-left: 30px;
-}
-
-.topnav a {
-  color: black;
-  padding: 30px;
-  margin-right: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: "Julius Sans One", sans-serif;
-}
-
-.author {
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.topnav a:hover {
-  background: linear-gradient(to left, #40bbfe, #e40246);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  transform: scale(1.1);
-}
-
-/* .topnav a:active {
-  background-color: rgb(122, 253, 214);
-  color: rgb(255, 132, 132);
-} */
-
-h1 {
-  color: white;
-  padding-top: 70px;
-  line-height: 2em;
-  margin: 5px;
-}
-
-blockquote {
-  color: rgb(3, 3, 3);
-  opacity: 0.2;
-}
-
-.text {
-  line-height: 2em;
-  width: 70%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  padding: 40px;
-  margin-top: -20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.blogpost {
-  width: 100%;
-}
-
-.form {
-  background-color: rgb(220, 245, 255);
-  padding: 40px;
-  /* border-radius: 12px; */
-  width: 400px;
-  text-align: left;
-}
-
-li {
-  list-style-type: none;
-}
-
-.socialMedia {
-  position: fixed;
-  right: 10px;
-}
-
-@keyframes move {
-  from {
-    top: 450px;
-  }
-  to {
-    top: 460px;
-  }
-}
-
-.search {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-fieldset {
-  border: 1px solid #d3d3d3;
-  border-radius: 10px;
-}
-legend {
-  background-color: #cccccc;
-  border-radius: 12px;
-  padding: 10px;
-  text-align: left;
-  color: white;
-}
-
-.menubar {
-  width: 35px;
-  height: 3px;
-  background-color: white;
-  margin: 7px;
-}
-
-.menuText {
-  color: white;
-  margin-top: 20px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 5px;
-  left: 10px;
-}
-
-.navMobile {
-  background-color: rgb(0, 0, 0);
-  opacity: 0.8;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  height: 300px;
-  width: 300px;
-  z-index: 120;
-  position: absolute;
-  left: 35px;
-  font-size: 20px;
-  margin-top: 20px;
-}
-#popUp {
-  display: none;
-}
-
-.closeNavMobile {
-  font-size: 30px;
-  color: white;
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  text-align: center;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.closeNavMobile:hover {
-  background-color: white;
-  color: black;
-}
-
-.navMobile a {
-  padding: 10px;
-  color: white;
-}
-
-.navMobile a:hover {
-  background-color: white;
-  color: black;
-}
-
-.blogposts {
-  /* border-top: 1px solid grey; */
-  text-align: center;
-  font-family: inherit;
-  /* border: 1px solid grey; */
-  /* background: rgb(244, 255, 239); */
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.blogposts:hover {
-  transform: scale(1.05);
-}
-
-.blogposts a {
-  text-decoration: none;
-  font-weight: inherit;
-}
-
-.title {
-  color: rgb(254, 254, 254);
-  padding: 10px;
-}
-
-.titleBanner {
-  width: 100%;
-  background: turquoise;
-}
-
-.body {
+.blogBody {
   font-weight: lighter;
   padding: 10px;
 }
 
-.blogpost {
-  text-align: justify;
-  font-family: "Roboto", sans-serif;
-}
-
-.postedBy {
-  color: rgb(33, 16, 41);
-  margin-bottom: 40px;
-  border-bottom: 1px solid rgb(223, 223, 223);
-  /* width: 40%; */
-  font-style: italic;
-  /* background: rgb(211, 211, 211); */
-  background: linear-gradient(to left, #40bbfe, #e40246);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.text {
-  width: 600px;
-}
-
-@media only screen and (max-width: 700px) {
-  .bannerText {
-    font-size: 40px;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .text {
-    width: 80%;
-  }
-}
-
-footer {
-  background-color: rgb(1, 94, 152);
-  /* z-index: 170; */
-  width: 100%;
-  height: 100%;
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  /* flex-direction: column;
-  margin: -10px; */
-  margin: -10px;
-}
-
-.blogTitle {
-  margin-top: 100px;
-}
 /* must define background-size cover in the outer div of the image */
-
-.wave {
-  aspect-ratio: 1500/500;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 700px) {
-  .menu {
-    display: none;
-  }
-}

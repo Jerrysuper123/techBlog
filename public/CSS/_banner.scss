@@ -1,0 +1,42 @@
+.banner {
+  /* background-image:url("images/FrontBanner.jpeg");  */
+  /* background-repeat: no-repeat; */
+  background-color: turquoise;
+  width: 100%;
+  height: 100vh;
+  @include columnCenter();
+}
+
+.bannerText {
+  margin-top: 30vh;
+  padding: 0;
+  margin-bottom: -20px;
+}
+
+.authorName {
+  font-family: $curvyText;
+  font-weight: bold;
+  font-size: 100px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.authorSlogan {
+  font-size: 27px;
+  font-family: $secondaryText;
+  background: linear-gradient(to left, #40bbfe, #e40246);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-style: italic;
+}
+
+.titleBanner {
+  width: 100%;
+  background: turquoise;
+}
+
+.socialMedia {
+  position: fixed;
+  right: 10px;
+}

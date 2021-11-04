@@ -14,38 +14,41 @@
 
             <!-- navigation -->
             <%- include('layouts/navbar'); -%>
+
+
+                <!-- articles -->
+                <div class="pageContent">
+                    <!-- <hr style="border-top: 1px solid gray; z-index: 200;"> -->
+
+                    <div class="blogpost">
+
+                        <!-- pass database data into the html -->
+
+                        <a>
+                            <h2 class="blogTitle">
+                                <%= blogpost.title %>
+                            </h2>
+
+                            <h3 class="blogBody">
+                                <%- blogpost.body %>
+                            </h3>
+                        </a>
+                        <p class="postedBy">Posted by Jerry Chen on <%= blogpost.datePosted.toDateString() %>
+                        </p>
+
+                    </div>
+
+                </div>
+                <!-- footer -->
+                <%- include('layouts/footer'); -%>
+
         </div>
 
-        <!-- articles -->
-        <div class="text">
-            <!-- <hr style="border-top: 1px solid gray; z-index: 200;"> -->
 
-            <div class="blogpost">
 
-                <!-- pass database data into the html -->
-
-                <a>
-                    <h2 class="blogTitle">
-                        <%= blogpost.title %>
-                    </h2>
-
-                    <h3 class="body">
-                        <%- blogpost.body %>
-                    </h3>
-                </a>
-                <p class="postedBy">Posted by Jerry Chen on <%= blogpost.datePosted.toDateString() %>
-                </p>
-
-            </div>
 
         </div>
-
-        <!-- footer -->
-        <%- include('layouts/footer'); -%>
-
-
-            </div>
-            <%- include('layouts/script'); -%>
+        <%- include('layouts/script'); -%>
 
     </body>
 

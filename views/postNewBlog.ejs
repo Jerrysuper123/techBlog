@@ -12,41 +12,40 @@
             <!-- navbar -->
 
 
-            <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');">
-                <!-- navigation -->
-                <%- include('layouts/navbar'); -%>
-            </div>
-            <div class="form">
-                <fieldset>
-                    <legend>New Blog</legend>
+            <!-- navigation -->
+            <%- include('layouts/navbar'); -%>
+                <div class="spaceOut"></div>
+                <div class="newBlogForm">
+                    <fieldset>
+                        <legend>New Blog</legend>
 
-                    <form action="/posts/store" method='POST' enctype="multipart/form-data">
+                        <form action="/posts/store" method='POST' enctype="multipart/form-data">
 
-                        <p>title:</p>
-                        <input type="text" name="title" />
+                            <p>title:</p>
+                            <input type="text" name="title" />
 
-                        <p>category:</p>
-                        <input type="text" name="category" />
+                            <p>category:</p>
+                            <input type="text" name="category" />
 
-                        <p>body:</p>
-                        <textarea name="body" id="body"></textarea>
-                        <script>
-                            $('#body').summernote({
-                                placeholder: 'body text',
-                                tabsize: 2,
-                                height: 500
-                            });
-                        </script>
-                        <!-- <p>img:</p>
+                            <p>body:</p>
+                            <textarea name="body" id="body"></textarea>
+                            <script>
+                                $('#body').summernote({
+                                    placeholder: 'body text',
+                                    tabsize: 2,
+                                    height: 500
+                                });
+                            </script>
+                            <!-- <p>img:</p>
                         <input type="file" id="image" name="image"> -->
-                        <button type='submit'>Submit</button>
-                    </form>
+                            <button type='submit'>Submit</button>
+                        </form>
 
-                </fieldset>
+                    </fieldset>
 
-            </div>
-            <!-- footer -->
-            <%- include('layouts/footer'); -%>
+                </div>
+                <!-- footer -->
+                <%- include('layouts/footer'); -%>
 
         </div>
 

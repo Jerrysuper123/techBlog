@@ -7,40 +7,38 @@
 
     <body>
 
-        <div id="container">
+        <div id="containerLogin">
 
-            <!-- 
-                <div class="banner" style="background-image: url('/images/FrontBanner.jpeg');"> -->
+            <div class="banner bannerHeightLogin">
+                <!-- navigation -->
+                <%- include('layouts/navbar'); -%>
 
-            <!-- navigation -->
-            <%- include('layouts/navbar'); -%>
+            </div>
+            <!-- articles -->
+            <div class="pageContent">
+                <!-- <hr style="border-top: 1px solid gray; z-index: 200;"> -->
 
+                <div class="blogpost">
 
-                <!-- articles -->
-                <div class="pageContent">
-                    <!-- <hr style="border-top: 1px solid gray; z-index: 200;"> -->
+                    <!-- pass database data into the html -->
 
-                    <div class="blogpost">
+                    <a>
+                        <h2 class="blogTitle">
+                            <%= blogpost.title %>
+                        </h2>
 
-                        <!-- pass database data into the html -->
-
-                        <a>
-                            <h2 class="blogTitle">
-                                <%= blogpost.title %>
-                            </h2>
-
-                            <h3 class="blogBody">
-                                <%- blogpost.body %>
-                            </h3>
-                        </a>
-                        <p class="postedBy">Posted by Jerry Chen on <%= blogpost.datePosted.toDateString() %>
-                        </p>
-
-                    </div>
+                        <h3 class="blogBody">
+                            <%- blogpost.body %>
+                        </h3>
+                    </a>
+                    <p class="postedBy">Posted by Jerry Chen on <%= blogpost.datePosted.toDateString() %>
+                    </p>
 
                 </div>
-                <!-- footer -->
-                <%- include('layouts/footer'); -%>
+
+            </div>
+            <!-- footer -->
+            <%- include('layouts/footer'); -%>
 
         </div>
 

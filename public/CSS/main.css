@@ -511,4 +511,7 @@ body {
 }
 
 /* must define background-size cover in the outer div of the image */
+.scrollDownIcon {
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=main.css.map */

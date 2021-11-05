@@ -510,8 +510,40 @@ body {
   font-size: 12px;
 }
 
+.startRead {
+  color: #2ea79b;
+  font-size: 20px;
+  font-style: italic;
+}
+
 /* must define background-size cover in the outer div of the image */
 .scrollDownIcon {
+  margin-top: 0px;
+  padding-top: 0px;
   margin-bottom: 10px;
+  -webkit-animation: updown 1s ease-in-out forwards infinite alternate;
+          animation: updown 1s ease-in-out forwards infinite alternate;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes updown {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
